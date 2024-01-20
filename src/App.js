@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import { TaskProvider } from './component/gestionTaches/TaskContext';
+import TaskList from './component/gestionTaches/TaskList';
+import TaskForm from './component/gestionTaches/TaskForm';
+import Reduce from './component/Reduce/Reduce';
+import Reduce2 from './component/Reduce/Reduce2';
+import FonctionList from './component/gestionFonction-reducer/FonctionList';
 
 function App() {
   return (
+    <TaskProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FonctionList />
+      <Reduce2 />
+      <Reduce />
+      <TaskList />
+      <TaskForm />
     </div>
+    </TaskProvider>
   );
 }
 
